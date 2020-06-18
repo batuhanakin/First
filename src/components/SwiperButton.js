@@ -1,9 +1,9 @@
 import React from 'react';
-import {StyleSheet, View, Text, TouchableOpacity, onPress} from 'react-native';
+import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
 
 const SwiperButton = props => {
   return (
-    <TouchableOpacity>
+    <TouchableOpacity onPress={props.onPress}>
       <View style={styles.ButtonStyle}>
         <Text style={styles.TextStyle}>{props.title}</Text>
       </View>
@@ -13,18 +13,19 @@ const SwiperButton = props => {
 
 const styles = StyleSheet.create({
   ButtonStyle: {
-    borderRadius: 50, // Rounded border
-    borderWidth: 2, // 2 point border widht
-    borderColor: '#fff', // White colored border
-    paddingHorizontal: 50, // Horizontal padding
-    paddingVertical: 10, // Vertical padding
+    borderRadius: 100, // Rounded border
     backgroundColor: '#63a995',
     paddingTop: 15,
     paddingBottom: 15,
+    marginLeft: 100,
+    marginTop: 35,
+    width: 200,
   },
   TextStyle: {
     color: '#ffffff',
     textAlign: 'center',
+    fontWeight: 'bold',
+    fontSize: 16,
   },
 });
 
