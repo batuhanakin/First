@@ -13,13 +13,13 @@ const SwiperButton = props => {
 
 const styles = StyleSheet.create({
   ButtonStyle: {
-    borderRadius: 100, // Rounded border
+    borderRadius: 17, // Rounded border
     backgroundColor: '#63a995',
-    paddingTop: 15,
+    paddingTop: 10,
     paddingBottom: 15,
     marginLeft: 100,
     marginTop: 35,
-    width: 200,
+    width: 230,
   },
   TextStyle: {
     color: '#ffffff',

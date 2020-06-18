@@ -160,13 +160,12 @@ const styles = StyleSheet.create({
   },
   ActiveDot: {
     backgroundColor: '#63a995',
-    width: 13,
-    height: 13,
-    borderRadius: 4,
+    width: 12,
+    height: 12,
+    borderRadius: 10,
     marginLeft: 3,
     marginRight: 3,
     marginTop: 3,
-    marginBottom: 3,
   },
   dots: {
     flexDirection: 'row',
