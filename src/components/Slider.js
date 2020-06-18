@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 import {
   StyleSheet,
   View,
@@ -23,7 +23,7 @@ const Slider = () => {
     <SafeAreaView>
       <TouchableOpacity
         onPress={() => {
-          this.obj.scrollTo({x: 1656, y: 0, animated: true});
+          obj.scrollTo({x: 1656, y: 0, animated: true});
         }}
         style={styles.TouchableOpacity}>
         <Text style={styles.SkipStyle}>Skip Introduction</Text>
@@ -46,7 +46,6 @@ const Slider = () => {
                   uri: data.image,
                 }}
               />
-              {/* <View>{replacer(data.title)}</View> */}
 
               <View
                 style={{
@@ -55,7 +54,6 @@ const Slider = () => {
                   justifyContent: 'center',
                   paddingTop: 7,
                   paddingBottom: 15,
-                  // width: Device_Width,
                 }}>
                 {data.title.split(' ').map(word => {
                   const match = word.match(/\*\*(.*)\*\*/);
@@ -105,7 +103,7 @@ const Slider = () => {
           count
           title="Next"
           onPress={() => {
-            this.obj.scrollTo({
+            obj.scrollTo({
               x: (count + 1) * Device_Width,
               y: 0,
               animated: true,
@@ -115,13 +113,6 @@ const Slider = () => {
       )}
     </SafeAreaView>
   );
-};
-const replacer = data => {
-  data.replace(/\*\*(\S+)\*\*/g, (matched, index) => {
-    console.log(index);
-    let text = <Text style={styles.TextStyle}>{index[1]}</Text>;
-    return text;
-  });
 };
 const styles = StyleSheet.create({
   BlockStyle: {
